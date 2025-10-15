@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StructuredAnswer",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["answer", "assumptions", "next_steps"],
+  "properties": {
+    "answer": {
+      "type": "string",
+      "description": "Direct answer in one short paragraph"
+    },
+    "assumptions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_steps": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
