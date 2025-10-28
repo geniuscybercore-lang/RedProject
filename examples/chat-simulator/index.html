@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>จำลองการสนทนากับแชทบอท</title>
+    <meta name="description" content="หน้าเว็บจำลองการสนทนากับแชทบอท พร้อมธีมสว่าง/มืด" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="logo" aria-hidden="true">💬</span>
+          <span class="title">จำลองแชทบอท</span>
+        </div>
+        <div class="actions">
+          <button id="themeToggle" class="icon-btn" aria-label="สลับโหมดสี" title="สลับโหมดสี">🌓</button>
+          <a class="icon-btn" href="https://github.com" target="_blank" rel="noreferrer noopener" aria-label="ดูซอร์สโค้ด" title="ดูซอร์สโค้ด"></a>
+        </div>
+      </header>
+
+      <main class="container">
+        <aside class="sidebar" aria-label="ตัวอย่างสคริปต์">
+          <h2>สคริปต์ตัวอย่าง</h2>
+          <ul id="scriptList" class="script-list" role="list">
+            <li><button data-script="intro">เริ่มทักทาย</button></li>
+            <li><button data-script="faq">คำถามพบบ่อย</button></li>
+            <li><button data-script="handoff">โอนสายเจ้าหน้าที่</button></li>
+          </ul>
+        </aside>
+
+        <section class="chat-panel" aria-label="หน้าต่างสนทนา">
+          <div id="chat" class="chat" role="log" aria-live="polite" aria-relevant="additions"></div>
+          <form id="composer" class="composer" autocomplete="off">
+            <input id="message" name="message" type="text" inputmode="text" placeholder="พิมพ์ข้อความของคุณ..." aria-label="ข้อความ" />
+            <button id="send" type="submit" class="send-btn" aria-label="ส่ง">ส่ง</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>ทำเพื่อเดโม • ภาษาไทยพร้อมใช้งาน • โหมดสว่าง/มืด</span>
+      </footer>
+    </div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>จำลองการสนทนากับแชทบอท</title>
+  <meta name="description" content="หน้าเว็บไซต์จำลองการสนทนากับแชทบอท (Chatbot Conversation Simulator)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🤖</div>
+        <div class="brand-text">
+          <strong>Chat Simulator</strong>
+          <span>จำลองบทสนทนา</span>
+        </div>
+      </div>
+      <nav class="presets" aria-label="Chat presets">
+        <h2>พรีเซ็ต</h2>
+        <button class="preset" data-preset="friendly">แชทบอทเป็นกันเอง</button>
+        <button class="preset" data-preset="professional">แชทบอทมืออาชีพ</button>
+        <button class="preset" data-preset="concise">ตอบสั้น กระชับ</button>
+        <button class="preset" data-preset="helper">ผู้ช่วยแนะนำสินค้า</button>
+      </nav>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch" />
+          <span class="slider"></span>
+        </label>
+        <span id="themeLabel">โหมดมืด</span>
+      </div>
+    </aside>
+
+    <main class="chat">
+      <header class="chat-header">
+        <div class="model">
+          <div class="dot online"></div>
+          <div>
+            <div class="title">แชทบอทสาธิต</div>
+            <div class="subtitle">จำลองการตอบกลับตามพรีเซ็ต</div>
+          </div>
+        </div>
+        <div class="actions">
+          <button id="newChatBtn" class="ghost" title="เริ่มแชทใหม่">เริ่มใหม่</button>
+        </div>
+      </header>
+
+      <section id="messages" class="messages" aria-live="polite" aria-label="ข้อความแชท">
+        <!-- messages will render here -->
+      </section>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <textarea id="messageInput" class="input" name="message" rows="1" placeholder="พิมพ์ข้อความของคุณ… (Shift+Enter ขึ้นบรรทัดใหม่)" aria-label="พิมพ์ข้อความ" aria-multiline="true" required></textarea>
+        <button class="send" type="submit" aria-label="ส่งข้อความ">ส่ง</button>
+      </form>
+    </main>
+  </div>
+
+  <script type="module" src="./assets/app.js"></script>
+</body>
+</html>
